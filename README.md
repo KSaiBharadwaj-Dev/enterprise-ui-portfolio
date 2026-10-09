@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Sai Kalyandurg: personal site
 
 A small multi-page site: an animated entrance, a profile page built from the resume, a projects page that
@@ -97,3 +98,7 @@ To show a new file in the explorer, add its path to `data/source-files.js`. To a
 The server in the UI demo is simulated inside the page, so sign-in, permissions and failures behave like a real API
 with no network calls. Demo accounts: `analyst` / `Analyst#2026` (viewer) and `lead` / `Lead#2026` (admin).
 The Angular files are source only: they pass the strict Angular compiler but are not run on the page.
+=======
+# PersonalWebsite
+Personal Website -- Hosted on Vercel
+>>>>>>> e0adee31cc91fed617eb7e096a06743bfaaa5d70
