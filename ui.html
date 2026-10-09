@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'"
+    />
+    <meta
+      name="description"
+      content="A working enterprise UI in HTML, CSS, TypeScript and React, with Angular beside it, and the source behind every behavior."
+    />
+    <title>Sai Kalyandurg, UI skills</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400..700&family=Source+Code+Pro:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400..700&display=swap"
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/ui.css" />
+    <link rel="stylesheet" href="css/lab.css" />
+  </head>
+  <body>
+    <a class="skip" href="#top">Skip to content</a>
+    <header class="nav">
+      <div class="wrap">
+        <a class="brand" href="index.html" data-site="name">Sai Kalyandurg</a>
+        <nav aria-label="Main">
+          <ul>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="ui.html" aria-current="page">UI skills</a></li>
+            <li><a href="profile.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <a class="btn btn-primary btn-sm" href="ui.html#source">Read the source</a>
+      </div>
+    </header>
+    <main id="top">
+      <div class="wrap">
+        <aside class="say" aria-label="A note from Sai">
+          <span class="say-avatar" aria-hidden="true">SK</span>
+          <div class="say-body">
+            <p class="say-text">
+              This is the part I would show an engineer. The demo below is real code. Try it, then
+              open the files behind it.
+            </p>
+            <div class="say-actions">
+              <a class="btn btn-sm" href="#lab">Try the live demo</a>
+              <a class="btn btn-sm" href="#source">Read the source</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <section class="proof" id="proof" aria-labelledby="proof-title">
+        <div class="wrap">
+          <h1 id="proof-title">Skills are easy to list. This page runs them.</h1>
+          <p class="proof-lede">
+            Sign-in sessions, role checks, validation, error recovery, state and responsive layouts
+            are working code on this page, written in HTML, CSS, TypeScript and React, with the
+            Angular equivalents beside them. Try each one, then read the code behind it.
+          </p>
+          <div class="cta">
+            <a class="btn btn-light" href="#lab">Try the live demo</a>
+            <a class="btn btn-outline-light" href="#source">Read the source code</a>
+          </div>
+          <ul class="concerns">
+            <li class="concern">
+              <h2>Authentication</h2>
+              <p>
+                Sign in against a simulated server. Sessions expire, renew and end cleanly, and the
+                token stays in memory, never in localStorage.
+              </p>
+              <div class="cta">
+                <button type="button" class="btn btn-light btn-sm" data-try="session">
+                  Try it
+                </button>
+                <button type="button" class="btn btn-outline-light btn-sm" data-code="tsx:session">
+                  Read the code
+                </button>
+              </div>
+            </li>
+            <li class="concern">
+              <h2>Authorization</h2>
+              <p>
+                Roles decide what the screen offers and what the API accepts. A viewer who skips the
+                button still gets a 403.
+              </p>
+              <div class="cta">
+                <button type="button" class="btn btn-light btn-sm" data-try="risks">Try it</button>
+                <button
+                  type="button"
+                  class="btn btn-outline-light btn-sm"
+                  data-code="tsx:permissions"
+                >
+                  Read the code
+                </button>
+              </div>
+            </li>
+            <li class="concern">
+              <h2>Validation</h2>
+              <p>
+                Fields check on blur and on submit, errors are announced, focus lands on the first
+                problem, and the server re-checks every payload.
+              </p>
+              <div class="cta">
+                <button type="button" class="btn btn-light btn-sm" data-try="validation">
+                  Try it
+                </button>
+                <button type="button" class="btn btn-outline-light btn-sm" data-code="tsx:parse">
+                  Read the code
+                </button>
+              </div>
+            </li>
+            <li class="concern">
+              <h2>Security</h2>
+              <p>
+                Untrusted text is escaped or sanitized against an allow-list, links are limited to
+                https, and sign-in resists guessing.
+              </p>
+              <div class="cta">
+                <button type="button" class="btn btn-light btn-sm" data-try="validation">
+                  Try it
+                </button>
+                <button type="button" class="btn btn-outline-light btn-sm" data-code="tsx:sanitize">
+                  Read the code
+                </button>
+              </div>
+            </li>
+            <li class="concern">
+              <h2>Error handling</h2>
+              <p>
+                Timeouts, retries with backoff, typed errors and an error boundary. Failures say
+                what happened and what to do next.
+              </p>
+              <div class="cta">
+                <button type="button" class="btn btn-light btn-sm" data-try="failures">
+                  Try it
+                </button>
+                <button type="button" class="btn btn-outline-light btn-sm" data-code="tsx:retry">
+                  Read the code
+                </button>
+              </div>
+            </li>
+            <li class="concern">
+              <h2>State management</h2>
+              <p>
+                One reducer owns the data. Updates show instantly and roll back if the request
+                fails, and the live state is on screen.
+              </p>
+              <div class="cta">
+                <button type="button" class="btn btn-light btn-sm" data-try="risks">Try it</button>
+                <button type="button" class="btn btn-outline-light btn-sm" data-code="tsx:reducer">
+                  Read the code
+                </button>
+              </div>
+            </li>
+            <li class="concern">
+              <h2>Responsive UI</h2>
+              <p>
+                The table responds to its container, not just the screen. Drag its corner and watch
+                it turn into cards.
+              </p>
+              <div class="cta">
+                <button type="button" class="btn btn-light btn-sm" data-try="risks">Try it</button>
+                <button
+                  type="button"
+                  class="btn btn-outline-light btn-sm"
+                  data-code="css:container"
+                >
+                  Read the code
+                </button>
+              </div>
+            </li>
+            <li class="concern">
+              <h2>Angular</h2>
+              <p>
+                A route guard, an HTTP interceptor, a signal store and typed forms, written the
+                Angular way and compiled with the strict Angular compiler.
+              </p>
+              <div class="cta">
+                <button
+                  type="button"
+                  class="btn btn-outline-light btn-sm"
+                  data-code="ng:interceptor"
+                >
+                  Read the code
+                </button>
+              </div>
+            </li>
+          </ul>
+          <p class="proof-note">
+            The demo's server is simulated inside the page, so sign-in, permissions and failures
+            behave like a real API with no network calls. The Angular files pass the strict
+            compiler, but they are source only and do not run on this page.
+          </p>
+        </div>
+      </section>
+
+      <section class="wrap lab" id="lab" aria-labelledby="lab-title">
+        <div class="lab-intro">
+          <h2 id="lab-title">Live demo: a small enterprise app</h2>
+          <p>
+            Start on the Session tab and sign in as the viewer or the admin. Then try the risk log,
+            the forms and the failure scenarios. Every behavior you see is in the code below.
+          </p>
+        </div>
+        <div id="lab-root"><p class="lab-loading">Loading the demo...</p></div>
+      </section>
+
+      <section class="source" id="source" aria-labelledby="source-title">
+        <div class="wrap source-inner">
+          <div>
+            <h2 id="source-title">Every file behind this site</h2>
+            <p class="intro">
+              Nothing on this page is a screenshot or a list of claims. The explorer below opens the
+              files this page is running right now, and each skill button jumps to the lines that
+              prove it.
+            </p>
+            <span class="source-status" id="source-status" role="status"
+              >Loading the source files...</span
+            >
+          </div>
+          <div class="tablist" role="tablist" aria-label="Source language">
+            <button
+              class="tab"
+              role="tab"
+              id="tab-html"
+              aria-controls="explorer"
+              aria-selected="false"
+              tabindex="-1"
+              type="button"
+            >
+              HTML<small></small>
+            </button>
+            <button
+              class="tab"
+              role="tab"
+              id="tab-css"
+              aria-controls="explorer"
+              aria-selected="false"
+              tabindex="-1"
+              type="button"
+            >
+              CSS<small></small>
+            </button>
+            <button
+              class="tab"
+              role="tab"
+              id="tab-js"
+              aria-controls="explorer"
+              aria-selected="false"
+              tabindex="-1"
+              type="button"
+            >
+              JavaScript<small></small>
+            </button>
+            <button
+              class="tab"
+              role="tab"
+              id="tab-tsx"
+              aria-controls="explorer"
+              aria-selected="true"
+              tabindex="0"
+              type="button"
+            >
+              React + TypeScript<small></small>
+            </button>
+            <button
+              class="tab"
+              role="tab"
+              id="tab-ng"
+              aria-controls="explorer"
+              aria-selected="false"
+              tabindex="-1"
+              type="button"
+            >
+              Angular<small></small>
+            </button>
+          </div>
+          <p class="tab-note" id="tab-note"></p>
+          <div
+            class="skills"
+            id="skills"
+            role="group"
+            aria-label="Skills used in these files"
+          ></div>
+          <p class="skill-note" id="skill-note" aria-live="polite"></p>
+          <div class="explorer" id="explorer" role="tabpanel" aria-labelledby="tab-tsx">
+            <div class="files" id="files" role="group" aria-label="Files"></div>
+            <div class="pane">
+              <div class="pane-head">
+                <p>
+                  <code class="pane-path" id="pane-path"></code
+                  ><span class="pane-meta" id="pane-meta"></span>
+                </p>
+                <button class="copy" id="copy-code" type="button">Copy file</button>
+              </div>
+              <div class="codebox" id="codebox" role="region" tabindex="0" aria-label="Source code">
+                <pre><code id="code">Loading the source files...</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="next wrap" aria-labelledby="next-title">
+        <h2 id="next-title">Where to next?</h2>
+        <p class="next-lede">
+          You have seen the code run. The projects page shows what I have shipped, and the profile
+          has the rest.
+        </p>
+        <div class="next-grid">
+          <a class="next-card" href="projects.html">
+            <strong>Projects on GitHub</strong>
+            <span>Browse each project's file structure and open the files.</span>
+            <em>See the projects</em>
+          </a>
+          <a class="next-card" href="profile.html">
+            <strong>Profile</strong>
+            <span>Experience, results, skills and certifications.</span>
+            <em>Read the profile</em>
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer class="foot">
+      <div class="wrap">
+        <span>© <span data-year></span> <span data-site="name">Sai Kalyandurg</span></span>
+        <span>
+          Plain HTML, CSS and TypeScript.
+          <a href="ui.html#source">Read the source</a>
+          <span data-site-show="siteRepo">
+            <span class="foot-sep" aria-hidden="true">·</span>
+            <a href="#" data-site-link="siteRepo">This site on GitHub</a>
+          </span>
+        </span>
+      </div>
+    </footer>
+    <script src="data/settings.js"></script>
+    <script src="data/source-files.js"></script>
+    <script src="data/skills-map.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/viewer.js"></script>
+    <script src="js/lab.js"></script>
+    <script src="js/ui.js"></script>
+  </body>
+</html>

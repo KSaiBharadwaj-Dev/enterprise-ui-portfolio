@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://api.github.com; object-src 'none'; base-uri 'none'; form-action 'none'"
+    />
+    <meta
+      name="description"
+      content="Projects by Sai Kalyandurg, with GitHub links and a browsable file structure for each repository."
+    />
+    <title>Sai Kalyandurg, Projects</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400..700&family=Source+Code+Pro:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400..700&display=swap"
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/projects.css" />
+  </head>
+  <body>
+    <a class="skip" href="#top">Skip to content</a>
+    <header class="nav">
+      <div class="wrap">
+        <a class="brand" href="index.html" data-site="name">Sai Kalyandurg</a>
+        <nav aria-label="Main">
+          <ul>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="projects.html" aria-current="page">Projects</a></li>
+            <li><a href="ui.html">UI skills</a></li>
+            <li><a href="profile.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <a class="btn btn-primary btn-sm" href="ui.html#source">Read the source</a>
+      </div>
+    </header>
+    <main id="top">
+      <div class="wrap">
+        <aside class="say" aria-label="A note from Sai">
+          <span class="say-avatar" aria-hidden="true">SK</span>
+          <div class="say-body">
+            <p class="say-text">
+              Here is what I have built. Each project links to its GitHub repository, and you can
+              open its file structure right here before you leave.
+            </p>
+            <div class="say-actions">
+              <a class="btn btn-sm" href="#projects">Projects</a>
+              <a class="btn btn-sm" href="ui.html">How I build UI</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <section class="wrap page-head" aria-labelledby="h-projects">
+        <h1 id="h-projects">Projects</h1>
+        <p class="page-lede">
+          Open a project's file structure to see how it is organized. When the repository is linked,
+          the tree is read live from GitHub and every file opens on GitHub.
+        </p>
+      </section>
+
+      <section class="wrap github" id="github" aria-labelledby="h-github" hidden>
+        <div class="github-card">
+          <div>
+            <h2 id="h-github">On GitHub</h2>
+            <p class="gh-handle" id="gh-handle"></p>
+            <p class="gh-bio" id="gh-bio"></p>
+            <p class="gh-stats num" id="gh-stats"></p>
+            <p class="gh-note" id="gh-note" role="status"></p>
+          </div>
+          <a class="btn btn-primary" id="gh-open" href="#" target="_blank" rel="noopener noreferrer"
+            >Open my GitHub profile</a
+          >
+        </div>
+      </section>
+
+      <section class="wrap projects" id="projects" aria-label="Project list">
+        <ul class="project-list" id="project-list"></ul>
+      </section>
+
+      <section class="wrap projects" id="recent" aria-labelledby="h-recent" hidden>
+        <h2 class="list-title" id="h-recent">Recent repositories</h2>
+        <ul class="project-list" id="recent-list"></ul>
+      </section>
+
+      <section class="wrap guide" aria-labelledby="h-guide">
+        <h2 id="h-guide">How to read a repository in two minutes</h2>
+        <ol class="guide-list">
+          <li>
+            <strong>Start with README.md.</strong> It says what the project does and how to run it.
+          </li>
+          <li>
+            <strong>Find the entry point.</strong> Look in <code>src/</code> for a file like
+            <code>main</code> or <code>App</code>, then follow its imports.
+          </li>
+          <li>
+            <strong>Check the tests.</strong> A <code>tests/</code> folder shows what the author
+            considers important to keep working.
+          </li>
+          <li>
+            <strong>Look at the automation.</strong> <code>.github/workflows/</code> shows how the
+            project is checked and shipped.
+          </li>
+        </ol>
+      </section>
+
+      <section class="next wrap" aria-labelledby="next-title">
+        <h2 id="next-title">Where to next?</h2>
+        <p class="next-lede">
+          Projects show what I deliver. The UI skills page shows how I write front-end code, running
+          live.
+        </p>
+        <div class="next-grid">
+          <a class="next-card" href="ui.html">
+            <strong>UI skills, live</strong>
+            <span>Sign in, break it, and read the source behind every behavior.</span>
+            <em>Open the demo</em>
+          </a>
+          <a class="next-card" href="profile.html">
+            <strong>Profile</strong>
+            <span>Experience, results, skills and certifications.</span>
+            <em>Read the profile</em>
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer class="foot">
+      <div class="wrap">
+        <span>© <span data-year></span> <span data-site="name">Sai Kalyandurg</span></span>
+        <span>
+          Plain HTML, CSS and TypeScript.
+          <a href="ui.html#source">Read the source</a>
+          <span data-site-show="siteRepo">
+            <span class="foot-sep" aria-hidden="true">·</span>
+            <a href="#" data-site-link="siteRepo">This site on GitHub</a>
+          </span>
+        </span>
+      </div>
+    </footer>
+    <script src="data/settings.js"></script>
+    <script src="data/projects.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/github.js"></script>
+    <script src="js/projects.js"></script>
+  </body>
+</html>

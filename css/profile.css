@@ -1,0 +1,363 @@
+/* Profile page: introduction, results, experience, skills, credentials and contact. */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  gap: 2.5rem 4.5rem;
+  padding-block: clamp(2rem, 5vw, 3.5rem) clamp(2.5rem, 5vw, 3.5rem);
+  align-items: start;
+}
+.hero h1 {
+  font-size: clamp(3rem, 8.5vw, 5.4rem);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+}
+.hero .title-line {
+  margin-top: 1rem;
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  color: var(--muted);
+}
+.hero .lede {
+  margin-top: 1.5rem;
+  max-width: 36rem;
+  font-family: var(--serif);
+  font-size: clamp(1.18rem, 2.1vw, 1.38rem);
+  line-height: 1.55;
+}
+.hero .cta {
+  margin-top: 2rem;
+}
+.facts {
+  margin: 0;
+  border-left: 1px solid var(--rule);
+  padding-left: 2rem;
+  display: grid;
+  gap: 1.25rem;
+}
+.facts dt {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+.facts dd {
+  margin: 0.15rem 0 0;
+  font-weight: 500;
+  line-height: 1.45;
+}
+.facts dd small {
+  display: block;
+  margin-top: 0.1rem;
+  font-weight: 400;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Results: four numbers from the resume, set as a quiet row. */
+.results-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 1.5rem 2rem;
+  padding-block: 1.75rem;
+  border-block: 1px solid var(--rule);
+}
+.result {
+  display: grid;
+  gap: 0.3rem;
+  align-content: start;
+}
+.result strong {
+  font-family: var(--serif);
+  font-size: clamp(1.7rem, 3.4vw, 2.2rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  font-variant-numeric: lining-nums;
+}
+.result span {
+  color: var(--muted);
+  font-size: 0.925rem;
+  line-height: 1.45;
+}
+
+/* Sections */
+.section {
+  display: grid;
+  grid-template-columns: 11.5rem minmax(0, 1fr);
+  gap: 1.25rem 3rem;
+  padding-block: 3.25rem;
+}
+#summary {
+  background: none;
+}
+.section > h2 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.section > div,
+.section > dl {
+  min-width: 0;
+}
+.prose {
+  max-width: 44rem;
+  font-size: 1.1rem;
+}
+
+/* Experience */
+.role + .role {
+  margin-top: 3.25rem;
+}
+.role-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.15rem 1.5rem;
+}
+.role-head h3 {
+  font-size: 1.4rem;
+}
+.role-head .when {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+}
+.role .where {
+  color: var(--muted);
+  font-size: 0.975rem;
+  margin-top: 0.15rem;
+}
+.bullets {
+  margin-top: 1.1rem;
+  display: grid;
+  gap: 0.7rem;
+  max-width: 44rem;
+}
+.bullets li {
+  position: relative;
+  padding-left: 1.2rem;
+}
+.bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.8em;
+  width: 0.5rem;
+  height: 1px;
+  background: var(--muted);
+}
+.more {
+  margin-top: 0.7rem;
+  max-width: 44rem;
+}
+.more summary {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--accent);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 0.45rem 0.85rem;
+  cursor: pointer;
+  list-style: none;
+  background: var(--surface);
+}
+.more summary::-webkit-details-marker {
+  display: none;
+}
+.more summary:hover {
+  border-color: var(--accent);
+}
+.more[open] summary {
+  margin-bottom: 0.9rem;
+}
+.more .when-open,
+.more[open] .when-closed {
+  display: none;
+}
+.more[open] .when-open {
+  display: inline;
+}
+.stack {
+  margin-top: 1.1rem;
+  max-width: 44rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.stack strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* Skills and credentials */
+.defs {
+  margin: 0;
+  display: grid;
+  gap: 1.5rem;
+}
+.defs > div {
+  display: grid;
+  grid-template-columns: 12rem minmax(0, 1fr);
+  gap: 0.5rem 2rem;
+  align-items: baseline;
+}
+.defs dt {
+  font-weight: 600;
+}
+.defs dd {
+  margin: 0;
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.4rem;
+}
+.chips li {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  padding: 0.2rem 0.6rem;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+}
+.cred-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 2.25rem 3rem;
+}
+.sub-title {
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+.cred-list {
+  display: grid;
+  gap: 1rem;
+}
+.cred-list li {
+  display: grid;
+  gap: 0.1rem;
+}
+.cred-list li strong {
+  font-weight: 600;
+}
+.cred-list li span {
+  color: var(--muted);
+  font-size: 0.925rem;
+}
+
+/* Contact */
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 2rem 3rem;
+  align-items: start;
+}
+.contact-info {
+  margin: 0;
+  display: grid;
+  gap: 1.25rem;
+}
+.contact-info dt {
+  font-size: 0.875rem;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+}
+.contact-info dd {
+  margin: 0;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+}
+.form {
+  display: grid;
+  gap: 1.1rem;
+}
+.field {
+  display: grid;
+  gap: 0.35rem;
+}
+.field label {
+  font-weight: 500;
+  font-size: 0.925rem;
+}
+.field input,
+.field textarea {
+  font: inherit;
+  font-size: 0.975rem;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 5px;
+  padding: 0.65rem 0.8rem;
+  width: 100%;
+  min-width: 0;
+}
+.field textarea {
+  min-height: 9rem;
+  resize: vertical;
+}
+.field input:hover,
+.field textarea:hover {
+  border-color: var(--muted);
+}
+.field input:focus-visible,
+.field textarea:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 1px;
+  border-color: var(--focus);
+}
+.hp {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+}
+.status {
+  font-size: 0.925rem;
+  min-height: 1.4em;
+}
+.status.ok {
+  color: var(--ok);
+}
+.status.err {
+  color: var(--err);
+}
+.status.info {
+  color: var(--muted);
+}
+.foot-sep {
+  margin-inline: 0.3rem;
+}
+
+@media (max-width: 800px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .facts {
+    border-left: 0;
+    border-top: 1px solid var(--rule);
+    padding-left: 0;
+    padding-top: 1.5rem;
+  }
+  .section {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
+    padding-block: 2.5rem;
+  }
+  .contact-grid,
+  .defs > div {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

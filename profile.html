@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://api.web3forms.com; object-src 'none'; base-uri 'none'; form-action 'none'"
+    />
+    <meta
+      name="description"
+      content="Experience, results, skills and certifications for Sai Kalyandurg, Project and Product Manager in Chicago."
+    />
+    <title>Sai Kalyandurg, Profile</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400..700&family=Source+Code+Pro:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400..700&display=swap"
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/profile.css" />
+  </head>
+  <body>
+    <a class="skip" href="#top">Skip to content</a>
+    <header class="nav">
+      <div class="wrap">
+        <a class="brand" href="index.html" data-site="name">Sai Kalyandurg</a>
+        <nav aria-label="Main">
+          <ul>
+            <li><a href="profile.html" aria-current="page">Profile</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="ui.html">UI skills</a></li>
+            <li><a href="profile.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <a class="btn btn-primary btn-sm" href="ui.html#source">Read the source</a>
+      </div>
+    </header>
+    <main id="top">
+      <div class="wrap">
+        <aside class="say" aria-label="A note from Sai">
+          <span class="say-avatar" aria-hidden="true">SK</span>
+          <div class="say-body">
+            <p class="say-text">
+              Here is who I am and what I have delivered. Scroll for the detail, or jump to what you
+              need.
+            </p>
+            <div class="say-actions">
+              <a class="btn btn-sm" href="#experience">Experience</a>
+              <a class="btn btn-sm" href="#skills">Skills</a>
+              <a class="btn btn-sm" href="#credentials">Certifications</a>
+              <a class="btn btn-sm" href="#contact">Contact</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <section class="wrap hero" aria-labelledby="name">
+        <div>
+          <h1 id="name" data-site="name">Sai Kalyandurg</h1>
+          <p class="title-line">
+            <span data-site="title">Project &amp; Product Manager</span>,
+            <span data-site="location">Chicago, IL</span>
+          </p>
+          <p class="lede" id="lead"></p>
+          <div class="cta" id="hero-links">
+            <a class="btn btn-primary" href="#contact">Get in touch</a>
+            <a class="btn" href="projects.html">See my projects</a>
+            <a class="btn" href="#" data-site-link="linkedin">LinkedIn</a>
+            <a class="btn" href="#" data-site-link="github">GitHub</a>
+            <a class="btn" href="#" data-site-link="resumeUrl">Resume (PDF)</a>
+          </div>
+        </div>
+        <dl class="facts" id="facts"></dl>
+      </section>
+
+      <section class="wrap results" aria-label="Results from my resume">
+        <ul class="results-list" id="results"></ul>
+      </section>
+
+      <section class="wrap section" id="summary" aria-labelledby="h-summary">
+        <h2 id="h-summary">Summary</h2>
+        <div><p class="prose" id="summary-text"></p></div>
+      </section>
+
+      <section class="wrap section" id="experience" aria-labelledby="h-exp">
+        <h2 id="h-exp">Experience</h2>
+        <div id="experience-list"></div>
+      </section>
+
+      <section class="wrap section" id="skills" aria-labelledby="h-skills">
+        <h2 id="h-skills">Skills</h2>
+        <dl class="defs" id="skills-list"></dl>
+      </section>
+
+      <section class="wrap section" id="credentials" aria-labelledby="h-cred">
+        <h2 id="h-cred">Certifications and education</h2>
+        <div class="cred-grid">
+          <div>
+            <h3 class="sub-title">Certifications</h3>
+            <ul class="cred-list" id="cert-list"></ul>
+          </div>
+          <div>
+            <h3 class="sub-title">Education</h3>
+            <ul class="cred-list" id="edu-list"></ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="wrap section" id="contact" aria-labelledby="h-contact">
+        <h2 id="h-contact">Contact</h2>
+        <div class="contact-grid">
+          <dl class="contact-info">
+            <div>
+              <dt>Email</dt>
+              <dd>
+                <a id="c-email" href="#">Email me</a>
+                <button type="button" class="btn btn-sm" id="copy-email">Copy</button>
+              </dd>
+            </div>
+            <div>
+              <dt>Elsewhere</dt>
+              <dd>
+                <a class="btn btn-sm" href="#" data-site-link="linkedin">LinkedIn</a>
+                <a class="btn btn-sm" href="#" data-site-link="github">GitHub</a>
+              </dd>
+            </div>
+            <div>
+              <dt>Based in</dt>
+              <dd data-site="location">Chicago, IL</dd>
+            </div>
+          </dl>
+          <form class="form" id="contact-form" novalidate>
+            <div class="field">
+              <label for="f-name">Name</label>
+              <input
+                id="f-name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                required
+                maxlength="120"
+              />
+            </div>
+            <div class="field">
+              <label for="f-email">Your email</label>
+              <input
+                id="f-email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                maxlength="200"
+              />
+            </div>
+            <div class="field">
+              <label for="f-message">Message</label>
+              <textarea id="f-message" name="message" required maxlength="4000"></textarea>
+            </div>
+            <div class="hp" aria-hidden="true">
+              <label for="f-botcheck">Leave this empty</label>
+              <input id="f-botcheck" name="botcheck" type="text" tabindex="-1" autocomplete="off" />
+            </div>
+            <div class="actions">
+              <button class="btn btn-primary" id="f-send" type="submit">Send message</button>
+              <p class="status" id="f-status" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="next wrap" aria-labelledby="next-title">
+        <h2 id="next-title">Where to next?</h2>
+        <p class="next-lede">
+          You have the background. The projects page shows the code, and the UI skills page runs it.
+        </p>
+        <div class="next-grid">
+          <a class="next-card" href="projects.html">
+            <strong>Projects on GitHub</strong>
+            <span>Browse each project's file structure and open the files.</span>
+            <em>See the projects</em>
+          </a>
+          <a class="next-card" href="ui.html">
+            <strong>UI skills, live</strong>
+            <span>Sign in, break it, and read the source behind every behavior.</span>
+            <em>Open the demo</em>
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer class="foot">
+      <div class="wrap">
+        <span>© <span data-year></span> <span data-site="name">Sai Kalyandurg</span></span>
+        <span>
+          Plain HTML, CSS and TypeScript.
+          <a href="ui.html#source">Read the source</a>
+          <span data-site-show="siteRepo">
+            <span class="foot-sep" aria-hidden="true">·</span>
+            <a href="#" data-site-link="siteRepo">This site on GitHub</a>
+          </span>
+        </span>
+      </div>
+    </footer>
+    <script src="data/settings.js"></script>
+    <script src="data/profile.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/profile.js"></script>
+  </body>
+</html>

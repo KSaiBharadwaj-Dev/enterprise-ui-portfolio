@@ -1,0 +1,224 @@
+/* Projects page: GitHub card, project list and the file tree. */
+.page-head {
+  padding-block: clamp(1.75rem, 4vw, 2.75rem) 1.25rem;
+}
+.page-head h1 {
+  font-size: clamp(2.6rem, 7vw, 4.2rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.page-lede {
+  margin-top: 1rem;
+  max-width: 40rem;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.github-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem 2rem;
+  padding: 1.4rem 1.6rem;
+  background: var(--band);
+  color: var(--band-ink);
+  border-radius: 10px;
+}
+.github-card h2 {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--band-muted);
+}
+.github-card > div {
+  display: grid;
+  gap: 0.2rem;
+  min-width: 0;
+}
+.gh-handle {
+  font-family: var(--serif);
+  font-size: 1.8rem;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+.gh-bio,
+.gh-stats,
+.gh-note {
+  color: var(--band-muted);
+  font-size: 0.95rem;
+}
+.github-card .btn-primary {
+  background: var(--band-ink);
+  border-color: var(--band-ink);
+  color: #11243d;
+}
+
+.projects {
+  padding-block: 1.5rem 0.5rem;
+}
+.list-title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.project {
+  display: grid;
+  gap: 1rem;
+  padding-block: 1.6rem;
+  border-bottom: 1px solid var(--rule);
+}
+.project:first-child {
+  border-top: 1px solid var(--rule);
+}
+.project-main {
+  display: grid;
+  gap: 0.45rem;
+  min-width: 0;
+}
+.project h3 {
+  font-size: 1.3rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.75rem;
+}
+.project .desc {
+  max-width: 42rem;
+}
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.15rem;
+}
+.project-tags li {
+  font: 500 0.78rem/1.5 var(--mono);
+  color: var(--muted);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 0 0.45rem;
+}
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.project-files {
+  display: grid;
+  gap: 0.6rem;
+  min-width: 0;
+}
+.files-status {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* The tree looks like the output of the `tree` command, with a guide line per level. */
+.tree-box {
+  max-height: 24rem;
+  overflow: auto;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 0.9rem 1rem;
+  font: 400 0.85rem/1.65 var(--mono);
+}
+.tree,
+.tree ul {
+  display: grid;
+  gap: 0;
+}
+.tree ul {
+  margin-left: 0.55rem;
+  padding-left: 1.1rem;
+  border-left: 1px solid var(--rule);
+}
+.tree a,
+.tree-file span,
+.tree-name {
+  display: inline-block;
+  padding-block: 0.05rem;
+  overflow-wrap: anywhere;
+}
+.tree a {
+  color: var(--ink);
+  text-decoration: none;
+}
+.tree a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+.tree-dir > details > summary {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  cursor: pointer;
+  list-style: none;
+  font-weight: 500;
+  color: var(--tok-fn);
+}
+.tree-dir > details > summary::-webkit-details-marker {
+  display: none;
+}
+.tree-dir > details > summary::before {
+  content: "";
+  flex: none;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(-45deg) translateY(-0.1rem);
+  transition: transform 0.15s;
+}
+.tree-dir > details[open] > summary::before {
+  transform: rotate(45deg) translate(-0.1rem, -0.1rem);
+}
+.tree-count {
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.guide {
+  margin-top: clamp(2rem, 5vw, 3rem);
+  padding-block: 1.75rem 0;
+}
+.guide h2 {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.guide-list {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.7rem;
+  max-width: 44rem;
+  counter-reset: step;
+}
+.guide-list li {
+  position: relative;
+  padding-left: 2rem;
+  counter-increment: step;
+}
+.guide-list li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0.15em;
+  display: grid;
+  place-items: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  border: 1px solid var(--rule);
+  border-radius: 50%;
+  background: var(--surface);
+  font: 600 0.75rem/1 var(--sans);
+  color: var(--muted);
+}
+.guide code {
+  font: 500 0.88em var(--mono);
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 0.05rem 0.3rem;
+}

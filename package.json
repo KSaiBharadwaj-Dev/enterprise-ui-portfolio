@@ -1,0 +1,30 @@
+{
+  "name": "sai-kalyandurg-site",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=20.19"
+  },
+  "description": "Personal site: profile, projects and a live UI skills demo. Plain HTML, CSS and JavaScript, plus a TypeScript and React demo that compiles to js/lab.js.",
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "typecheck": "tsc -p src/lab/tsconfig.json",
+    "check:angular": "ngc -p src/angular/tsconfig.json",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\" \"css/*.css\" \"*.html\" \"js/{common,entrance,github,profile,projects,ui,viewer}.js\" \"data/{profile,projects,settings,source-files}.js\" \"tools/*.mjs\"",
+    "serve": "node tools/serve.mjs"
+  },
+  "devDependencies": {
+    "@angular/common": "^21.2.25",
+    "@angular/compiler": "^21.2.25",
+    "@angular/compiler-cli": "^21.2.25",
+    "@angular/core": "^21.2.25",
+    "@angular/forms": "^21.2.25",
+    "@angular/platform-browser": "^21.2.25",
+    "@angular/router": "^21.2.25",
+    "@types/react": "^18.3.31",
+    "esbuild": "^0.28.2",
+    "prettier": "^3.9.9",
+    "rxjs": "^7.8.2",
+    "typescript": "^6.0.3"
+  }
+}
