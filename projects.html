@@ -77,12 +77,11 @@
         </div>
       </section>
 
-      <!-- Project list hidden for now: the entries in data/projects.js are placeholders.
-           Uncomment this section once real projects are added there.
-      <section class="wrap projects" id="projects" aria-label="Project list">
+      <!-- Project list hidden for now. The element stays because js/projects.js looks it up
+           before it loads the GitHub card. Remove `hidden` once real projects are in data/projects.js. -->
+      <section class="wrap projects" id="projects" aria-label="Project list" hidden>
         <ul class="project-list" id="project-list"></ul>
       </section>
-      -->
 
       <section class="wrap projects" id="recent" aria-labelledby="h-recent" hidden>
         <h2 class="list-title" id="h-recent">Recent repositories</h2>
